@@ -15,7 +15,13 @@ pipeline {
         }
         stage ('hostname'){
             steps {
-            sh 'ifconfig'
+            sh """
+            ls
+            ifconfig 
+            pwd
+            whoami
+            hostname
+            """
             }
             
         }
